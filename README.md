@@ -80,13 +80,13 @@ I started with four regression models:
 
 These models were trained to predict RUL from engine settings, sensor values, and engineered features. The initial model comparison showed that all four models followed the general RUL trend, especially for engines close to failure. However, they also produced similar errors in the same regions.  This was an important finding because it meant that the issue was probably not just the choice of algorithm. The models were likely limited by how the degradation history was represented.
 
-Sorted all models RUL comparison<img width="5400" height="2400" alt="sorted_all_models_rul_comparison" src="https://github.com/user-attachments/assets/b98cc8da-8428-486f-ab74-ad25916b4e10" />
+Sorted all models RUL comparison<img width="5400" height="2400" alt="sorted_all_models_rul_comparison" src="https://github.com/user-attachments/assets/56a326e9-af24-4296-99e8-e378d7b8cfb4" />
 
 ### Stage 2: Error Analysis by Engine
 
 I then compared the absolute prediction error for each model across all test engines. The error plot showed that the models often failed on the same engines. That suggested that the tree-based models were learning from similar information and had similar limitations.
 
-Model error comparison by engine<img width="5400" height="2400" alt="all_models_error_comparison" src="https://github.com/user-attachments/assets/373e63ef-7de2-4058-8b0e-1f8558a17bbb" />
+Model error comparison by engine<img width="5400" height="2400" alt="all_models_error_comparison" src="https://github.com/user-attachments/assets/53a6f4cb-062e-487e-ae73-2e1f7f831ce9" />
 
 This changed the direction of the project. Instead of simply adding more models, I focused on improving the representation of engine degradation over time.
 
@@ -135,11 +135,11 @@ The reason for trying an ensemble was that tree models and LSTM models may make 
 
 The graph below compares the best tree model, LSTM, and ensemble model against the actual NASA RUL values.
 
-<img width="5400" height="2400" alt="advanced_model_comparison_sorted" src="https://github.com/user-attachments/assets/42e027ce-a54e-4675-886b-be89c56455ab" />
+<img width="5400" height="2400" alt="advanced_model_comparison_sorted" src="https://github.com/user-attachments/assets/cd9436f9-8de1-49bc-8d41-e1463fb94e95" />
 
 The graph below compares the absolute prediction error for each final model across all test engines.
 
-<img width="5400" height="2400" alt="advanced_model_error_comparison" src="https://github.com/user-attachments/assets/ee394243-f988-41bf-ba04-d766c2920dd1" />
+<img width="5400" height="2400" alt="advanced_model_error_comparison" src="https://github.com/user-attachments/assets/1d0e23c1-510c-47c7-82dd-3e201d63c0e9" />
 
 ---
 
